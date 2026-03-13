@@ -22,13 +22,25 @@
 
 <style>
 :root {
+
+  /* Fondo */
   --bg-color: linear-gradient(135deg, #f8e4e8, #eec9d2, #d4af37);
   --bg-image: none;
-  --gold-text: linear-gradient(135deg, #f6d365, #fda085, #d4af37, #fff1a8);
-  --gold-btn: linear-gradient(135deg, #fff1a8 0%, #f6d365 25%, #d4af37 50%, #f6d365 75%, #fff1a8 100%);
-  --text-light: #f4f1f7;
-}
 
+  /* Colores principales */
+  --color-title: #d4af37;
+  --color-text: #5a1a23;
+  --color-light: #ffffff;
+
+  /* Dorado */
+  --gold-text: linear-gradient(135deg, #f6d365, #fda085, #d4af37, #fff1a8);
+  --gold-btn: linear-gradient(135deg,#fff1a8 0%,#f6d365 25%,#d4af37 50%,#f6d365 75%,#fff1a8 100%);
+
+  /* Tamaños texto */
+  --size-title: 2rem;
+  --size-text: 1.25rem;
+
+}
 
 
 body {
@@ -38,7 +50,7 @@ body {
   background: var(--bg-image), var(--bg-color);
   background-size: cover;
   background-attachment: fixed;
-  color: var(--text-light);
+  color: var(--color-text);
   overflow-x: hidden;
   font-size: 19px;
   line-height: 1.7;
@@ -330,9 +342,15 @@ backdrop-filter: blur(18px);
   opacity: 1;
   transform: none;
 }
-.section h2 { font-size: 2rem; margin-bottom: 12px; }
-.section p { font-size: 1.25rem; }
-
+.section h2{
+  font-size: var(--size-title);
+  margin-bottom: 12px;
+  color: var(--color-title);
+}
+.section p{
+  font-size: var(--size-text);
+  color: var(--color-text);
+}
 /* SEPARADORES CORREGIDOS */
 .sep {
   height: 3px;
