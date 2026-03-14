@@ -2646,8 +2646,12 @@ openBtn.addEventListener("click", () => {
   audio.play().catch(() => {});
 
   // Animar nombre
-  nombre.classList.add("animate");
+nombre.classList.remove("animate");
 
+// fuerza reflow (truco para que Safari ejecute la animación)
+void nombre.offsetWidth;
+
+nombre.classList.add("animate");
 });
 
   /* ===== BOTÓN PAUSA / CONTINUAR ===== */
